@@ -1,0 +1,21 @@
+<html>
+
+{% load static %}
+<head>
+
+<title>Consulta estado pedido</title>
+
+</head>
+
+<body>
+	<form action="/consulta/" method='GET'>
+
+		<input type="text" id="rut" name="rut" required oninput="checkRut(this)" placeholder="Ingrese RUT">
+		<input type="submit" value="Consultar">
+		<script src="{% static 'valrut/validarRUT.js' %}"></script>
+
+	</form>
+
+</body>
+
+</html>

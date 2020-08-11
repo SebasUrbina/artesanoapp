@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+<link href="{% static 'bootstrap/css/style.css' %}" rel="stylesheet"  type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>El Artesano</title>
+    <link rel="shortcut icon" href="{% static 'adesign/img/alexcgdesign.png'%}" type="{% static 'adesign/image/x-icon'%}">
+    <link rel="stylesheet" href="{% static 'adesign/css/estilos.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    <script src="{% static 'adesign/js/smooth-scroll.polyfills.min.js'%}"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../home">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <section class="textos-consulta">
+            <!-- <h1>El Artesano de Instagram</h1> -->
+            {% if cliente %}
+            <h1><strong>Estimad@ {{cliente.nombre}},</strong></h1>
+            <h1><strong>el estado de tu pedido es:</strong></h1>
+                    <br>
+                      <h2><strong>{{cliente.estado}}</strong></h2>
+            {% else %}
+                <h2>Cliente no encontrado</h2>
+            {% endif %}
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+    <main>
+<section class="contenedor sobre-nosotros" id='nosotros'>
+            <h2 class="titulo">Nuestros productos</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="{% static 'adesign/img/mesa.jpg' %}" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <h3><span>1</span>Los mejores productos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
+                        consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
+                        velit doloribus laboriosam ut.</p>
+                    <h3><span>2</span>Los mejores productos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
+                        consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
+                        velit doloribus laboriosam ut.</p>
+                </div>
+            </div>
+        </section>
+        <section class="portafolio" id='productos'>
+            <div class="contenedor">
+                <h2 class="titulo">Productos</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="{% static 'adesign/img/img1.jpg'%}" alt="">
+                        <div class="hover-galeria">
+                            <img src="{% static 'adesign/img/icono1.png'%}" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'adesign/img/img2.jpg'%}" alt="">
+                        <div class="hover-galeria">
+                            <img src="{% static 'adesign/img/icono1.png'%}" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'adesign/img/img3.jpg'%}" alt="">
+                        <div class="hover-galeria">
+                            <img src="{% static 'adesign/img/icono1.png'%}" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'adesign/img/img1.jpg'%}" alt="">
+                        <div class="hover-galeria">
+                            <img src="{% static 'adesign/img/icono1.png'%}" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'adesign/img/img4.jpg'%}" alt="">
+                        <div class="hover-galeria">
+                            <img src="{% static 'adesign/img/icono1.png'%}" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'adesign/img/img5.jpg'%}" alt="">
+                        <div class="hover-galeria">
+                            <img src="{% static 'adesign/img/icono1.png'%}" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'adesign/img/img6.jpg'%}" alt="">
+                        <div class="hover-galeria">
+                            <img src="{% static 'adesign/img/icono1.png'%}" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'adesign/img/img7.jpg'%}" alt="">
+                        <div class="hover-galeria">
+                            <img src="{% static 'adesign/img/icono1.png'%}" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="clientes contenedor">
+            <h2 class="titulo">Que dicen nuestros clientes</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="{% static 'adesign/img/face1.jpg'%}" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>Name</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'adesign/img/face2.jpg'%}" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>Name</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente!</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- <section class="about-services">
+            <div class="contenedor">
+                <h2 class="titulo">Nuestros servicios</h2>
+                <div class="servicio-cont">
+                    <div class="servicio-ind">
+                        <img src="{% static 'adesign/img/ilustracion1.svg'%}" alt="">
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="{% static 'adesign/img/ilustracion4.svg'%}" alt="">
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="{% static 'adesign/img/ilustracion3.svg'%}    " alt="">
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+    <footer>
+        <div class="contenedor-footer" id='contacto'>
+            <div class="content-foo">
+                <h4>WhatsApp</h4>
+                <p>+56 9 8786 3153</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>8296312</p>
+            </div>
+            <div class="content-foo">
+                <h4>Ubicación</h4>
+                <p>Cauquenes</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy;  Sebastian Urbina |  </h2>
+    </footer>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+</body>
+
+</html>

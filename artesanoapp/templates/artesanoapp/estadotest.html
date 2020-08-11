@@ -1,0 +1,25 @@
+<html>
+
+<head>
+
+<title>Consulta estado pedido</title>
+
+</head>
+
+<body>
+
+
+<p>RUT: {{rut}}</p>
+
+{% if cliente %}
+
+	<p>El estado de tu pedido es:<strong>{{cliente.estado}}</strong></p>
+
+{% else %}
+
+	<p>Cliente no encontrado</p>
+
+{% endif %}
+</body>
+
+</html>

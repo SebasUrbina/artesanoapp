@@ -1,0 +1,1 @@
+web: gunicorn elartesano.wsgi --log-file -
